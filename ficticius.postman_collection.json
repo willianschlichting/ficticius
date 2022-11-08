@@ -1,0 +1,74 @@
+{
+	"id": "8ed2aad7-db79-2a7d-201a-7b69b2f8c64e",
+	"name": "ficticius",
+	"description": "",
+	"order": [
+		"c0e56c31-28aa-748d-b9c2-1ba1e7518709",
+		"2ffdd493-5933-0301-c2bb-83b2d4b6dd34"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1667869164407,
+	"owner": "22432952",
+	"public": false,
+	"requests": [
+		{
+			"id": "2ffdd493-5933-0301-c2bb-83b2d4b6dd34",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/vehicles/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1667872098372,
+			"name": "http://localhost:8080/vehicles/",
+			"description": "",
+			"collectionId": "8ed2aad7-db79-2a7d-201a-7b69b2f8c64e",
+			"responses": [],
+			"rawModeData": "{\n\t\"plate\": \"AAA1234\",\n\t\"brand\": \"VOLVO\",\n\t\"model\": \"143\",\n\t\"cityConsumption\": 14.3,\n\t\"highwayConsumption\": \"40.2\",\n\t\"fabricationDate\": \"2012-04-23T18:25:43.511Z\"\n}"
+		},
+		{
+			"id": "c0e56c31-28aa-748d-b9c2-1ba1e7518709",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/consumption",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1667871993505,
+			"name": "http://localhost:8080/consumption",
+			"description": "",
+			"collectionId": "8ed2aad7-db79-2a7d-201a-7b69b2f8c64e",
+			"responses": [],
+			"rawModeData": "{\n\t\"plate\": \"AAA1234\", \n\t\"cityKm\": 100, \n\t\"highWayKm\": 300, \n\t\"fuelPrice\": 7.52\n}"
+		}
+	]
+}
