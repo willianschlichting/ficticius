@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ConsumptionDto {
     private String plate;
-    private Integer cityKm;
-    private Integer highWayKm;
+    private Double cityKm;
+    private Double highWayKm;
     private Double fuelPrice;
 }

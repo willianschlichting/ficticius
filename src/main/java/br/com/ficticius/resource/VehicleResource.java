@@ -1,6 +1,6 @@
 package br.com.ficticius.resource;
 
-import br.com.ficticius.model.Vehicle;
+import br.com.ficticius.model.VehicleModel;
 import br.com.ficticius.resource.core.BaseResource;
 import br.com.ficticius.service.VehicleService;
 import br.com.ficticius.service.core.IService;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/vehicles")
-public class VehicleResource extends BaseResource<Vehicle> {
+public class VehicleResource extends BaseResource<VehicleModel> {
 
     @Autowired
     private VehicleService vehicleService;

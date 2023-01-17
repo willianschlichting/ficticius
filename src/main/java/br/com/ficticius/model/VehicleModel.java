@@ -9,7 +9,7 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name = "vehicle")
-public class Vehicle extends BaseEntity {
+public class VehicleModel extends BaseEntity {
 
     @Column(name = "plate", length = 8, nullable = false)
     private String plate;
