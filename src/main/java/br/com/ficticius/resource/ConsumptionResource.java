@@ -27,6 +27,7 @@ public class ConsumptionResource {
         ConsumptionResult consumptionResult = null;
 
         VehicleModel vehicleModel = vehicleRepository.findByPlate(consumptionDto.getPlate());
+        //VehicleModel vehicleModel = vehicleRepository.findAll().get(0);
 
         if (vehicleModel != null) {
             Vehicle vehicle = new Vehicle(vehicleModel.getPlate(), vehicleModel.getFabricationDate(), vehicleModel.getCityConsumption(), vehicleModel.getHighwayConsumption());
