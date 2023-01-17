@@ -1,6 +1,6 @@
 package br.com.ficticius.service;
 
-import br.com.ficticius.model.Vehicle;
+import br.com.ficticius.model.VehicleModel;
 import br.com.ficticius.repository.VehicleRepository;
 import br.com.ficticius.service.core.BaseService;
 import br.com.ficticius.service.core.IService;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class VehicleService extends BaseService<Vehicle> implements IService<Vehicle> {
+public class VehicleService extends BaseService<VehicleModel> implements IService<VehicleModel> {
 
     @Autowired
     private VehicleRepository vehicleRepository;
@@ -22,12 +22,12 @@ public class VehicleService extends BaseService<Vehicle> implements IService<Veh
     }
 
     @Override
-    public void validateEntity(Vehicle obj) {
+    public void validateEntity(VehicleModel obj) {
 
     }
 
     @Override
-    public List<Vehicle> findAll() {
+    public List<VehicleModel> findAll() {
         return vehicleRepository.findAll();
     }
 }
