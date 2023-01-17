@@ -11,7 +11,7 @@ import java.util.Date;
 @Table(name = "vehicle")
 public class VehicleModel extends BaseEntity {
 
-    @Column(name = "plate", length = 8, nullable = false)
+    @Column(name = "plate", length = 8, nullable = false, unique = true)
     private String plate;
 
     @Column(name = "brand", length = 120)
