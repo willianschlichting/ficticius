@@ -14,10 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.Calendar;
-
 @RestController
 @RequestMapping("consumption")
 public class ConsumptionResource {
@@ -34,22 +30,6 @@ public class ConsumptionResource {
 
         if (vehicleModel != null) {
             Vehicle vehicle = new Vehicle(vehicleModel.getPlate(), vehicleModel.getFabricationDate(), vehicleModel.getCityConsumption(), vehicleModel.getHighwayConsumption());
-            /*if (vehicleModel.getFabricationDate() != null) {
-                Calendar cal = Calendar.getInstance();
-                cal.setTime(vehicleModel.getFabricationDate());
-                vehicleModel.setYear(cal.get(Calendar.YEAR));
-            }
-            Double cityLiters = 0d;
-            Double highWayLiters = 0d;
-            if (validValue(consumption.getCityKm()) && validValue(vehicleModel.getCityConsumption())) {
-                cityLiters = formatValue(consumption.getCityKm() / vehicleModel.getCityConsumption(), 2);
-            }
-            if (validValue(consumption.getHighWayKm()) && validValue(vehicleModel.getHighwayConsumption())) {
-                highWayLiters = formatValue(consumption.getHighWayKm() / vehicleModel.getHighwayConsumption(), 2);
-            }
-
-            vehicleModel.setSpentFuel(cityLiters + highWayLiters);
-            vehicleModel.setSpentValue(formatValue(vehicleModel.getSpentFuel() * consumption.getFuelPrice(), 2));*/
             Consumption consumption = new Consumption();
             consumptionResult = consumption.calculate(vehicle, new Travel(consumptionDto.getCityKm(), consumptionDto.getHighWayKm()));
             Double spentValue = new SpentValue().calculate(consumptionResult.getTotalFuelRequired(), consumptionDto.getFuelPrice());
